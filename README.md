@@ -1,8 +1,9 @@
 # CreditCardField
 
-TODO: Write a gem description
+Credit card type field auto detected by the credit card number.
 
 ## Installation
+Only support Rails 3.1+ with jQuery
 
 Add this line to your application's Gemfile:
 
@@ -16,9 +17,15 @@ Or install it yourself as:
 
     $ gem install credit_card_field
 
-## Usage
+Add to assets pipeline
+    application.js
+    $ //= require credit_card_field
+    application.css
+    $ *= require credit_card_field
 
-TODO: Write usage instructions here
+## Usage
+  
+
 
 ## Contributing
 
