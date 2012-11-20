@@ -11,4 +11,13 @@ class @CreditCardType
     return 'master' if masterCard.test(@card_number)
     return 'american_express' if americanExpress.test(@card_number)
     return 'diners_club' if dinerCard.test(@card_number)
-    'others'
+    'not_valid'
+
+@CreditCardField = {
+  keyup: (e)->
+    cardType = new CreditCardType($(this).val()).cardType()
+    form = $(this).closest('form')
+    form.find(".credit-card-type li").removeClass('active')
+    form.find(".credit-card-type .#{cardType}").addClass('active')
+    form.find('input[rel=credit-card-type]').val(cardType)
+}
