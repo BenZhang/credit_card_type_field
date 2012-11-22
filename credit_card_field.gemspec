@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = CreditCardField::VERSION
   gem.authors       = ["benzhang"]
   gem.email         = ["bzbnhang@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Credit Card type}
+  gem.summary       = %q{Credit Card type field}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
