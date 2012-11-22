@@ -1,5 +1,5 @@
 module CreditCardField
-  module ViewHelper  
+  module ViewHelper
 
     def credit_card_type_field(method, options = {})
       options[:card_number_selector] ||= "##{@object_name}_credit_card_no"
