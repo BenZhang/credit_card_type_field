@@ -18,12 +18,16 @@ Or install it yourself as:
     $ gem install credit_card_field
 
 Add to assets pipeline
-    application.js
+
+application.js
+
     $ //= require credit_card_field
-    application.css
+
+application.css
+
     $ *= require credit_card_field
 
-## Usage
+## Demo
   
 
 
