@@ -7,7 +7,7 @@ Only support Rails 3.1+ with jQuery
 
 Add this line to your application's Gemfile:
 
-    gem 'credit_card_field'
+    gem 'credit_card_type_field'
 
 And then execute:
 
@@ -15,17 +15,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install credit_card_field
+    $ gem install credit_card_type_field
 
 Add to assets pipeline
 
 application.js
 
-    $ //= require credit_card_field
+    $ //= require credit_card_type_field
 
 application.css
 
-    $ *= require credit_card_field
+    $ *= require credit_card_type_field
+
+## Tutorial
+
+
 
 ## Demo
   

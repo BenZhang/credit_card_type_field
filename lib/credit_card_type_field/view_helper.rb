@@ -1,4 +1,4 @@
-module CreditCardField
+module CreditCardTypeField
   module ViewHelper
 
     def credit_card_type_field(method, options = {})
@@ -15,6 +15,10 @@ module CreditCardField
           $('input[rel=credit-card-type]').closest('form').find('#{options[:card_number_selector]}').keyup(CreditCardField.keyup);
         </script>
         ).html_safe
+    end
+
+    def credit_card_type_field_tag(object_name, method, options = {})
+      
     end
     
   end

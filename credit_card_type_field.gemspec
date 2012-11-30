@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'credit_card_field/version'
+require 'credit_card_type_field/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "credit_card_field"
+  gem.name          = "credit_card_type_field"
   gem.version       = CreditCardField::VERSION
   gem.authors       = ["benzhang"]
   gem.email         = ["bzbnhang@gmail.com"]
