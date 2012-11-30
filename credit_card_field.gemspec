@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["bzbnhang@gmail.com"]
   gem.description   = %q{Credit Card type}
   gem.summary       = %q{Credit Card type field}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/BenZhang/credit_card_type_field"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
