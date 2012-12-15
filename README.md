@@ -51,7 +51,7 @@ Done! CreditCardTypeField gem will add javascript keyup event listening to the c
 credit card is according to the credit card number. At present, only visa master american_express diners_club are supported. 
 
 ## TODO
-  
+  add credit_card_type_tag
   add DEMO
 
 ## Contributing
