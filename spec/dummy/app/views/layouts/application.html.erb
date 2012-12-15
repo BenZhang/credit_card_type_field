@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Dummy</title>
-    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery', 'application' %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
   <body>
     <%= yield %>

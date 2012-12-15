@@ -7,7 +7,7 @@ require 'capybara/rspec'
 
 Capybara.javascript_driver = :selenium
 RSpec.configure do |config|
-  # config.mock_with :mocha
+  config.mock_with :mocha
 end
 
 Rails.backtrace_cleaner.remove_silencers!

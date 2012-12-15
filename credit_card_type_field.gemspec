@@ -22,4 +22,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec-rails", "~> 2.6"
   gem.add_development_dependency "mocha"
   gem.add_development_dependency "capybara", "~> 1.1"
+  gem.add_development_dependency "coffee-rails", '~> 3.2.1'
+  gem.add_development_dependency 'sass-rails',   '~> 3.2.3'
 end

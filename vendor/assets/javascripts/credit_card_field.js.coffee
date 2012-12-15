@@ -13,7 +13,7 @@ class @CreditCardType
     return 'diners_club' if dinerCard.test(@card_number)
     'not_valid'
 
-@CreditCardField = {
+window.CreditCardField = {
   keyup: (e)->
     cardType = new CreditCardType($(this).val()).cardType()
     form = $(this).closest('form')

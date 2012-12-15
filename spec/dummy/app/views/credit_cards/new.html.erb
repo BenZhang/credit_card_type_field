@@ -1,4 +1,9 @@
-<%= form_for @credit_card do |f| %>
-  <%= f.text_field :credit_card_no %>
-  <%= f.credit_card_type_field :card_type %>
+<%= form_for @credit_card, html: {id: 'credit-card-form1'} do |f| %>
+  <%= f.text_field :credit_card_no, id: 'card-no-1' %>
+  <%= f.credit_card_type_field :card_type %>  
+<% end %>
+
+<%= form_for @credit_card, html: {id: 'credit-card-form2'} do |f| %>
+  <%= f.text_field :card_number, id: 'card-no-2' %>
+  <%= f.credit_card_type_field :card_type, card_number_field_name: 'card_number' %>  
 <% end %>
