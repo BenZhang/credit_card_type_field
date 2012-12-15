@@ -1,4 +1,4 @@
-# CreditCardField
+# CreditCardTypeField
 
 Credit card type field auto detected by the credit card number.
 
@@ -29,11 +29,30 @@ application.css
 
 ## Tutorial
 
+Support form_for and simple_form_for. Examples:
 
+```ruby
+  <%= form_for @credit_card do |f| %>
+    <%= f.text_field :credit_card_no %>
+    <%= f.credit_card_type_field :card_type %>
+  <% end %>
+```
 
-## Demo
+Specify the credit card number name and supported credit card types:
+
+```ruby
+  <%= form_for @credit_card do |f| %>
+    <%= f.text_field :card_no %>
+    <%= f.credit_card_type_field :card_type, card_number_field_name: 'card_no', accept_types: %(visa master) %>
+  <% end %>
+```
+
+Done! CreditCardTypeField gem will add javascript keyup event listening to the credit card number field. It is able to detect what kind of the input 
+credit card is according to the credit card number. At present, only visa master american_express diners_club are supported. 
+
+## TODO
   
-
+  add DEMO
 
 ## Contributing
 
@@ -42,3 +61,7 @@ application.css
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+MIT
