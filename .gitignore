@@ -9,6 +9,7 @@ InstalledFiles
 _yardoc
 coverage
 doc/
+pec/dummy/log
 .DS_Store
 lib/bundler/man
 pkg
