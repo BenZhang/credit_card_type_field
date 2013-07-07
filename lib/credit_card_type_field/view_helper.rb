@@ -3,6 +3,7 @@ module CreditCardTypeField
 
     module FormHelper
       def credit_card_type_field(method, options = {})
+        append_js = options[:js].nil? ? true : options[:js]
         options[:card_number_field_name] ||= 'credit_card_no'
         field_name = "#{@object_name}\\\\[#{options[:card_number_field_name]}\\\\]"
         options[:accept_types] ||= %w(visa master american_express diners_club)
@@ -16,12 +17,14 @@ module CreditCardTypeField
           <script>
             $('input[rel=credit-card-type]').closest('form').find('input[name=#{field_name}]').keyup(CreditCardField.keyup);
           </script>
-          ).html_safe
+          ).html_safe if append_js
+        html
       end
     end
 
     module FormTagHelper
       def credit_card_type_field_tag(name, value = nil, options = {})
+        append_js = options[:js].nil? ? true : options[:js]
         options[:card_number_field_name] ||= 'credit_card_no'
         field_name = options[:card_number_field_name]
         options[:accept_types] ||= %w(visa master american_express diners_club)
@@ -35,7 +38,8 @@ module CreditCardTypeField
           <script>
             $('input[rel=credit-card-type]').closest('form').find('input[name=#{field_name}]').keyup(CreditCardField.keyup);
           </script>
-          ).html_safe
+          ).html_safe if append_js
+        html
       end
     end
     
