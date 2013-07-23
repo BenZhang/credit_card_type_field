@@ -43,7 +43,7 @@ Specify the credit card number name and supported credit card types. Target is t
 ```ruby
   <%= form_for @credit_card do |f| %>
     <%= f.text_field :card_no %>
-    <%= f.credit_card_type_field :card_type, card_number_field_name: 'card_no', accept_types: %w(visa master), data: {target: '#card_no'} %>
+    <%= f.credit_card_type_field :card_type, accept_types: %w(visa master), data: {target: '#card_no'} %>
   <% end %>
 ```
 
