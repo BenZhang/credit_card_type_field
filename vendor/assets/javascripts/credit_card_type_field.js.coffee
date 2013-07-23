@@ -13,11 +13,11 @@ class @CreditCardType
     return 'diners_club' if dinerCard.test(@card_number)
     'not_valid'
 
-window.CreditCardField = {
-  keyup: (e)->
+$ ->
+  target = $('input[rel=credit-card-type]').data('target')
+  $('input[rel=credit-card-type]').closest('form').find(target).keyup (e) ->
     cardType = new CreditCardType($(this).val()).cardType()
     form = $(this).closest('form')
     form.find(".credit-card-type li").removeClass('active')
     form.find(".credit-card-type .#{cardType}").addClass('active')
     form.find('input[rel=credit-card-type]').val(cardType)
-}

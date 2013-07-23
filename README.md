@@ -38,12 +38,12 @@ Support form_for and simple_form_for. Examples:
   <% end %>
 ```
 
-Specify the credit card number name and supported credit card types:
+Specify the credit card number name and supported credit card types. Target is the field that you input the credit card number.
 
 ```ruby
   <%= form_for @credit_card do |f| %>
     <%= f.text_field :card_no %>
-    <%= f.credit_card_type_field :card_type, card_number_field_name: 'card_no', accept_types: %w(visa master) %>
+    <%= f.credit_card_type_field :card_type, card_number_field_name: 'card_no', accept_types: %w(visa master), data: {target: '#card_no'} %>
   <% end %>
 ```
 
@@ -51,7 +51,6 @@ Done! CreditCardTypeField gem will add javascript keyup event listening to the c
 credit card is according to the credit card number. At present, only visa master american_express diners_club are supported. 
 
 ## TODO
-  add credit_card_type_tag
   
   add DEMO
 

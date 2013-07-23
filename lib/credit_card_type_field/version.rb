@@ -1,3 +1,3 @@
 module CreditCardField
-  VERSION = "1.5"
+  VERSION = "2.0"
 end
